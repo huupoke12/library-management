@@ -23,4 +23,3 @@ Library Management project for INT2207 - Group #10
 * List các loại sách: ISBN, tên sách, tác giả, năm xuất bản, số lượng đang có, thể loại, được mượn nhiều (Hot), giá bìa.
 * List sinh viên (Có sẵn, lấy từ Database của trường, chỉ đọc): MSSV, tên, ngày tháng năm sinh, giới tính, khoá+lớp, email.
 * List các lượt mượn: ID lượt mượn, MSSV, ID sách, ngày tạo lượt mượn, hạn mượn.
-
