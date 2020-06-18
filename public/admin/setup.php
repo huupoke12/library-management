@@ -1,8 +1,8 @@
 <?php
 $pageTitle = 'Cài đặt';
-require_once $_SERVER['DOCUMENT_ROOT'].'/include/header.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/header.php';
 
-$databaseConfigFilePath = dirname($_SERVER['DOCUMENT_ROOT']).'/config/database.json';
+$databaseConfigFilePath = dirname($_SERVER['DOCUMENT_ROOT']) . '/config/database.json';
 $databaseConfig = new stdClass();
 $newDatabaseConfigStatusHTML = '';
 
@@ -109,5 +109,5 @@ function showNewDatabasePassword() {
 </script>
 
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/include/footer.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/footer.php';
 ?>
