@@ -1,5 +1,6 @@
 <?php
 define('PRIMARY_COLOR', 'teal');
+define('DATABASE_CONFIG_FILE_PATH', dirname($_SERVER['DOCUMENT_ROOT']) . '/config/database.json');
 ?>
 
 <!DOCTYPE html>

@@ -2,7 +2,6 @@
 $pageTitle = 'Cài đặt';
 require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/header.php';
 
-$databaseConfigFilePath = dirname($_SERVER['DOCUMENT_ROOT']) . '/config/database.json';
 $databaseConfig = new stdClass();
 $newDatabaseConfigStatusHTML = '';
 
@@ -13,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $newDatabaseConfigJson = json_encode(array('hostname'=>$_POST['hostname'], 'username'=>$_POST['username'], 'password'=>$_POST['password'], 'database_name'=>$_POST['database_name']));
 
-            if (!file_put_contents($databaseConfigFilePath, $newDatabaseConfigJson)) {
+            if (!file_put_contents(DATABASE_CONFIG_FILE_PATH, $newDatabaseConfigJson)) {
                 throw new Exception('Không thể ghi file cài đặt!');
             }
 
@@ -39,10 +38,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <?php
 try {
-    if (!file_exists($databaseConfigFilePath)) {
+    if (!file_exists(DATABASE_CONFIG_FILE_PATH)) {
         throw new Exception('File cài đặt không tồn tại');
     }
-    $databaseConfigJson = file_get_contents($databaseConfigFilePath);
+    $databaseConfigJson = file_get_contents(DATABASE_CONFIG_FILE_PATH);
 
     if (!$databaseConfigJson) {
         if ($databaseConfigJson === '') {
@@ -59,13 +58,12 @@ try {
 
     $databaseConnection = new PDO("mysql:host=$databaseConfig->hostname;dbname=$databaseConfig->database_name", $databaseConfig->username, $databaseConfig->password);
     $databaseConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $databaseConnection = null;
 
     echo '<strong class="w3-text-green w3-large">Kết nối thành công</strong>';
 } catch (Exception $e) {
     echo '<strong class="w3-text-red w3-large">' . $e->getMessage() . '</strong>';
 }
-
+$databaseConnection = null;
 ?>
 </div>
 <hr>
