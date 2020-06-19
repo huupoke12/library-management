@@ -57,9 +57,9 @@ try {
         throw new Exception('File cài đặt không hợp lệ');
     }
 
-    $connection = new PDO("mysql:host=$databaseConfig->hostname;dbname=$databaseConfig->database_name", $databaseConfig->username, $databaseConfig->password);
-    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $connection = null;
+    $databaseConnection = new PDO("mysql:host=$databaseConfig->hostname;dbname=$databaseConfig->database_name", $databaseConfig->username, $databaseConfig->password);
+    $databaseConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $databaseConnection = null;
 
     echo '<strong class="w3-text-green w3-large">Kết nối thành công</strong>';
 } catch (Exception $e) {
