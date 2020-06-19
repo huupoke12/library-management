@@ -2,7 +2,7 @@
 $pageTitle = 'Cài đặt';
 require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/header.php';
 
-$databaseConfig = new stdClass();
+$databaseConfig = null;
 $newDatabaseConfigStatusHTML = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
