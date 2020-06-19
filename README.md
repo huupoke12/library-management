@@ -1,6 +1,9 @@
 # library-management
 Library Management project for INT2207 - Group #10
 
+## Trạng thái dự án
+Chưa hoàn thành. Dự kiến hoàn thành trước 25/06/2020.
+
 ## Các thành viên
 1. Nguyễn Đức Dũng (18020365)
 1. Nguyễn Mạnh Hùng (18020583)
