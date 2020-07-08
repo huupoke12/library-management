@@ -1,4 +1,5 @@
 <?php
+define('DATABASE_CONFIG_FILE_PATH', dirname($_SERVER['DOCUMENT_ROOT']) . '/config/database.json');
 $databaseConnection = null;
 
 try {
@@ -8,6 +9,6 @@ try {
     $databaseConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch (Exception $e) {
-    echo '<p class="w3-text-red w3-large"><strong>Đã có lỗi xảy ra. Hãy kiểm tra cài đặt cơ sở dữ liệu.</strong></p>';
+    echo $e->getMessage();
 }
 ?>
