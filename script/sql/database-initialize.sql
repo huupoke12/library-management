@@ -5,7 +5,7 @@ CREATE TABLE member (
     national_id VARCHAR(12) NOT NULL UNIQUE,
     full_name VARCHAR(63) NOT NULL,
     birth_date DATE NOT NULL,
-    gender BOOLEAN,
+    gender CHAR(1),
     email_address VARCHAR(255),
     phone_number VARCHAR(15),
     join_date DATE NOT NULL,
