@@ -64,7 +64,7 @@ Demo: https://huupoke-int2207-7-1920ii.herokuapp.com/
 
 ### Mô hình thực thể liên kết
 
-![ER Diagram](https://i.imgur.com/utA65Nw.png)
+![ER Diagram](https://i.imgur.com/VXfA7Vu.png)
 
 ### Mô hình cơ sở dữ liệu
 
