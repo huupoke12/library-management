@@ -34,7 +34,6 @@ CREATE TABLE book_copy (
     book_id INT UNSIGNED NOT NULL,
     import_date DATE NOT NULL,
     usability BOOLEAN NOT NULL,
-    borrow_id BIGINT UNSIGNED UNIQUE,
     note TEXT,
 
     PRIMARY KEY (id)
@@ -61,8 +60,7 @@ CREATE TABLE borrow (
 -- Foreign keys
 
 ALTER TABLE book_copy
-ADD FOREIGN KEY (book_id) REFERENCES book(id),
-ADD FOREIGN KEY (borrow_id) REFERENCES borrow(id);
+ADD FOREIGN KEY (book_id) REFERENCES book(id);
 
 
 ALTER TABLE borrow
