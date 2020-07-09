@@ -21,6 +21,7 @@ Là ứng dụng hỗ trợ thủ thư quản lí người dùng mượn sách, 
 ## Chức năng
 Demo một vài chức năng như sau:
 | Chức năng                | Lệnh                                                                                            |
+| ------------------------ | ----------------------------------------------------------------------------------------------- |
 | Liệt kê thành viên       | `SELECT * FROM member;`                                                                         |
 | Liệt kê sách             | `SELECT * FROM book;`                                                                           |
 | Thêm thành viên          | `INSERT INTO member (national_id, full_name, birth_date, join_date) VALUES (?, ?, ?, ?);`       |
