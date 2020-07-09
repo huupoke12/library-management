@@ -23,7 +23,7 @@ CREATE TABLE book (
     publisher VARCHAR(127),
     publish_year SMALLINT,
     price INT UNSIGNED NOT NULL,
-    total_borrow_count INT UNSIGNED NOT NULL,
+    borrow_count INT UNSIGNED NOT NULL,
     note TEXT,
 
     PRIMARY KEY (id)
