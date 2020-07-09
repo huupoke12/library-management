@@ -1,5 +1,6 @@
 <?php
 define('PRIMARY_COLOR', 'teal');
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/environment-config.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@ define('PRIMARY_COLOR', 'teal');
 
   <body>
     <header>
-      <nav class="w3-bar w3-<?php echo PRIMARY_COLOR; ?>">
+      <nav class="w3-bar w3-large w3-<?php echo PRIMARY_COLOR; ?>">
         <a href="/" class="w3-bar-item w3-button" title="Trang chủ"><i class="material-icons">home</i> Trang chủ</a>
       </nav>
     </header>
