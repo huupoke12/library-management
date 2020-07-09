@@ -8,6 +8,7 @@ CREATE TABLE member (
     gender BOOLEAN,
     email_address VARCHAR(255),
     phone_number VARCHAR(15),
+    join_date DATE NOT NULL,
     note TEXT,
 
     PRIMARY KEY (id)
@@ -32,7 +33,7 @@ CREATE TABLE book (
 CREATE TABLE book_copy (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
     book_id INT UNSIGNED NOT NULL,
-    import_date DATE,
+    import_date DATE NOT NULL,
     usability BOOLEAN NOT NULL,
     borrow_id BIGINT UNSIGNED UNIQUE,
     note TEXT,
