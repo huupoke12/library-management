@@ -19,8 +19,6 @@ Nhằm hạn chế giấy mực, cũng như công sức viết lách ghi chú tr
 
 Ứng dụng có thể dễ dàng thêm/sửa/xoá thông tin người dùng, lượt mượn, nhập/xuất sách, quản lí việc mượn, tình trạng sách, cũng như tính toán phí và tiền phạt (nếu có).
 
-Mã nguồn: https://github.com/huupoke12/library-management
-
 Demo: https://huupoke-int2207-7-1920ii.herokuapp.com/
 
 ## Thành viên
