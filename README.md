@@ -37,6 +37,7 @@ Demo: https://huupoke-int2207-7-1920ii.herokuapp.com/
 
 ### Quản lí sách
 | Chức năng           | Lệnh                                                                       |
+| ------------------- | -------------------------------------------------------------------------- |
 | Thêm sách           | `INSERT INTO book (title, author, publisher, price) VALUES (?, ?, ?, ?);`  |
 | Sửa thông tin sách  | `UPDATE book SET isbn = ?, publish_year = ? WHERE id = ?;`                 |
 | Nhập thêm sách      | `INSERT INTO book_copy (book_id, import_date, usability) VALUES (?, ?, ?)` |
@@ -44,6 +45,7 @@ Demo: https://huupoke-int2207-7-1920ii.herokuapp.com/
 
 ### Quản lí lượt mượn
 | Chức năng         | Lệnh                                                                                            |
+| ----------------- | ----------------------------------------------------------------------------------------------- |
 | Tạo lượt mượn     | `INSERT INTO borrow (book_copy_id, member_id, borrow_date, required_date) VALUES (?, ?, ?, ?);` |
 | Cập nhật trả sách | `UPDATE borrow SET return_date = ? WHERE id = ?;`                                               |
 
