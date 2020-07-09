@@ -1,19 +1,25 @@
 # library-management
+
 Library Management project for INT2207 - Group #10
 
 ## Trạng thái dự án
-Chưa hoàn thành. Dự kiến hoàn thành trước 09/07/2020.
+
+Chưa hoàn thành. Dự kiến hoàn thành trong 09/07/2020.
 
 ## Mục lục
+
 - [Mô tả](#mô-tả)
 - [Thành viên nhóm](#thành-viên)
 - [Các chức năng](#các-chức-năng)
 - [Mô hình](#mô-hình)
 
 ## Mô tả
+
 Nhằm hạn chế giấy mực, cũng như công sức viết lách ghi chú trong công việc quản lí thư viện, đây là một ứng dụng được viết nhằm hỗ trợ thủ thư quản lí người dùng mượn sách và trả sách.
+
 Ứng dụng có thể dễ dàng thêm/sửa/xoá thông tin người dùng, lượt mượn, nhập/xuất sách, quản lí việc mượn, tình trạng sách, cũng như tính toán phí và tiền phạt (nếu có).
 Mã nguồn: https://github.com/huupoke12/library-management
+
 Demo: https://huupoke-int2207-7-1920ii.herokuapp.com/
 
 ## Thành viên
@@ -24,18 +30,21 @@ Demo: https://huupoke-int2207-7-1920ii.herokuapp.com/
 ## Các chức năng
 
 ### Tra cứu
+
 | Chức năng          | Lệnh                     |
 | ------------------ | ------------------------ |
 | Liệt kê thành viên | `SELECT * FROM member;`  |
 | Liệt kê sách       | `SELECT * FROM book;`    |
 
 ### Quản lí thành viên
+
 | Chức năng                | Lệnh                                                                                      |
 | ------------------------ | ----------------------------------------------------------------------------------------- |
 | Thêm thành viên          | `INSERT INTO member (national_id, full_name, birth_date, join_date) VALUES (?, ?, ?, ?);` |
 | Sửa thông tin thành viên | `UPDATE member SET phone_number = ? WHERE id = ?;`                                        |
 
 ### Quản lí sách
+
 | Chức năng           | Lệnh                                                                       |
 | ------------------- | -------------------------------------------------------------------------- |
 | Thêm sách           | `INSERT INTO book (title, author, publisher, price) VALUES (?, ?, ?, ?);`  |
@@ -44,6 +53,7 @@ Demo: https://huupoke-int2207-7-1920ii.herokuapp.com/
 | Sửa trạng thái sách | `UPDATE book_copy SET usability = ? WHERE id = ?;`                         |
 
 ### Quản lí lượt mượn
+
 | Chức năng         | Lệnh                                                                                            |
 | ----------------- | ----------------------------------------------------------------------------------------------- |
 | Tạo lượt mượn     | `INSERT INTO borrow (book_copy_id, member_id, borrow_date, required_date) VALUES (?, ?, ?, ?);` |
@@ -52,7 +62,9 @@ Demo: https://huupoke-int2207-7-1920ii.herokuapp.com/
 ## Mô hình
 
 ### Mô hình thực thể liên kết
+
 ![ER Diagram](https://i.imgur.com/utA65Nw.png)
 
 ### Mô hình cơ sở dữ liệu
+
 ![Database](https://i.imgur.com/TB4ic58.png)
