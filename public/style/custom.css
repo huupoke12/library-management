@@ -2,6 +2,6 @@
     font-weight: bold;
 }
 
-time {
+body > footer time {
     font-weight: bold;
 }
