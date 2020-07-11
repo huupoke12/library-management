@@ -27,10 +27,10 @@ try {
         <thead>
           <tr class="w3-<?php echo PRIMARY_COLOR; ?>">
             <th>ID</th>
-            <th>Số CCCD</th>
             <th>Họ và Tên</th>
             <th>Ngày tháng năm sinh</th>
             <th>Giới tính</th>
+            <th>Số CCCD</th>
             <th>Các thông tin khác</th>
           </tr>
         </thead>
@@ -39,7 +39,6 @@ try {
 foreach ($memberTableData as $memberData) {
   echo '<tr>';
   echo '<td class="primary-key">' . $memberData['id'] . '</td>';
-  echo '<td>' . $memberData['national_id'] . '</td>';
   echo '<td>' . $memberData['full_name'] . '</td>';
   echo '<td><time datetime="' . $memberData['birth_date'] .'">' . $memberData['birth_date'] . '</time></td>';
   echo '<td>';
@@ -55,6 +54,7 @@ foreach ($memberTableData as $memberData) {
       break;
   }
   echo '</td>';
+  echo '<td>' . $memberData['national_id'] . '</td>';
   echo '<td><a class="w3-btn w3-blue" href="/' . $prefixUrl . '/view?id=' . $memberData['id'] . '">';
   echo '<i class="material-icons">visibility</i> Xem chi tiết</a></td>';
   echo '</tr>';
