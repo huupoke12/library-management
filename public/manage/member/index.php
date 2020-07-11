@@ -3,10 +3,16 @@ $pageTitle = 'Quản lý thành viên';
 $urlPart = explode('/', $_SERVER['REQUEST_URI']);
 $prefixUrl = $urlPart[1] . '/' . $urlPart[2];
 $memberTableQuery = "SELECT id, national_id, full_name, birth_date, gender FROM member";
+$memberTableData = [];
+
 require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/header.php';
 require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/database-connect.php';
 
-
+try {
+  $memberTableData = $databaseConnection->query($memberTableQuery)->fetchAll();
+} catch(PDOException $e) {
+  echo $e->getMessage();
+}
 ?>
 
 <section class="w3-section w3-card">
@@ -30,41 +36,35 @@ require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/database-connect.php
         </thead>
         <tbody>
 <?php
-try {
-  $memberCount = 0;
-  foreach ($databaseConnection->query($memberTableQuery) as $memberRow) {
-    echo '<tr>';
-    echo '<td class="primary-key">' . $memberRow['id'] . '</td>';
-    echo '<td>' . $memberRow['national_id'] . '</td>';
-    echo '<td>' . $memberRow['full_name'] . '</td>';
-    echo '<td><time datetime="' . $memberRow['birth_date'] .'">' . $memberRow['birth_date'] . '</time></td>';
-    echo '<td>';
-    switch ($memberRow['gender']) {
-      case 'm':
-        echo 'Nam';
-        break;
-      case 'f':
-        echo 'Nữ';
-        break;
-      default:
-        echo '';
-        break;
-    }
-    echo '</td>';
-    echo '<td><a class="w3-btn w3-blue" href="/' . $prefixUrl . '/view?id=' . $memberRow['id'] . '">';
-    echo '<i class="material-icons">visibility</i> Xem chi tiết</a></td>';
-    echo '</tr>';
-    $memberCount++;
+foreach ($memberTableData as $memberData) {
+  echo '<tr>';
+  echo '<td class="primary-key">' . $memberData['id'] . '</td>';
+  echo '<td>' . $memberData['national_id'] . '</td>';
+  echo '<td>' . $memberData['full_name'] . '</td>';
+  echo '<td><time datetime="' . $memberData['birth_date'] .'">' . $memberData['birth_date'] . '</time></td>';
+  echo '<td>';
+  switch ($memberData['gender']) {
+    case 'm':
+      echo 'Nam';
+      break;
+    case 'f':
+      echo 'Nữ';
+      break;
+    default:
+      echo '';
+      break;
   }
-} catch(PDOException $e) {
-  echo $e->getMessage();
+  echo '</td>';
+  echo '<td><a class="w3-btn w3-blue" href="/' . $prefixUrl . '/view?id=' . $memberData['id'] . '">';
+  echo '<i class="material-icons">visibility</i> Xem chi tiết</a></td>';
+  echo '</tr>';
 }
 ?>
         </tbody>
         <tfoot>
           <tr class="w3-<?php echo PRIMARY_COLOR; ?>">
             <td colspan="5">Tổng số thành viên</td>
-            <td><?php echo $memberCount; ?></td>
+            <td><?php echo count($memberTableData); ?></td>
           </tr>
         </tfoot>
     </table>
