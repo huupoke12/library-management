@@ -24,6 +24,8 @@ require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/environment-config.p
     <header>
       <nav class="w3-bar w3-large w3-<?php echo PRIMARY_COLOR; ?>">
         <a href="/" class="w3-bar-item w3-button" title="Trang chủ"><i class="material-icons">home</i> Trang chủ</a>
+        <a href="/manage/member" class="w3-bar-item w3-button" title="Quản lý thành viên"><i class="material-icons">people</i> Quản lý thành viên</a>
+        <a href="/manage/book" class="w3-bar-item w3-button" title="Quản lý sách"><i class="material-icons">library_books</i> Quản lý sách</a>
       </nav>
     </header>
 

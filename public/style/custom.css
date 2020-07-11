@@ -17,3 +17,10 @@ tfoot {
 .info-column-name {
     font-weight: bold;
 }
+
+.text-justified-limit {
+    text-align: justify;
+    text-justify: inter-word;
+    margin: auto;
+    max-width: 1000px;
+}
