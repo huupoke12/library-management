@@ -13,3 +13,7 @@ body > footer time {
 tfoot {
     font-weight: bold;
 }
+
+.info-column-name {
+    font-weight: bold;
+}
