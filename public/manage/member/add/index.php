@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
   if (empty($newMemberData['birth_date'])) {
     array_push($errorTextArray, 'Thiếu ngày tháng năm sinh');
-  } else if (!validateDate($_POST['birth_date'], 'Y-m-d')) {
+  } else if (!validateDate($newMemberData['birth_date'], 'Y-m-d')) {
     array_push($errorTextArray, 'Ngày tháng năm sinh và / hoặc định dạng không hợp lệ');
   }
   if (empty($newMemberData['national_id'])) {
