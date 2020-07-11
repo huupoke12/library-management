@@ -2,9 +2,11 @@
 
 Library Management project for INT2207 - Group #10
 
+[Demo](https://huupoke-int2207-7-1920ii.herokuapp.com)
+
 ## Trạng thái dự án
 
-Chưa hoàn thành. Dự kiến hoàn thành trong 09/07/2020.
+Chưa hoàn thành. Dự kiến hoàn thành trong ngày 12/07/2020.
 
 ## Mục lục
 
@@ -18,8 +20,6 @@ Chưa hoàn thành. Dự kiến hoàn thành trong 09/07/2020.
 Nhằm hạn chế giấy mực, cũng như công sức viết lách ghi chú trong công việc quản lí thư viện, đây là một ứng dụng được viết nhằm hỗ trợ thủ thư quản lí người dùng mượn sách và trả sách.
 
 Ứng dụng có thể dễ dàng thêm/sửa/xoá thông tin người dùng, lượt mượn, nhập/xuất sách, quản lí việc mượn, tình trạng sách, cũng như tính toán phí và tiền phạt (nếu có).
-
-Demo: https://huupoke-int2207-7-1920ii.herokuapp.com/
 
 ## Thành viên
 * Nguyễn Đức Dũng (18020365)
