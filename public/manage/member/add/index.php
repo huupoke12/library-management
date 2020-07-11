@@ -32,6 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
   if (empty($newMemberData['national_id'])) {
     array_push($errorTextArray, 'Thiếu số căn cước công dân');
+  } else if (!ctype_digit($newMemberData['national_id'])) {
+    array_push($errorTextArray, 'Số căn cước công dân có chứa các kí tự khác số');
   } else if (strlen($newMemberData['national_id']) > 12) {
     array_push($errorTextArray, 'Số căn cước công dân quá 12 kí tự');
   }
@@ -45,6 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
   if (empty($newMemberData['phone_number'])) {
     $newMemberData['phone_number'] = NULL;
+  } else if (!ctype_digit($newMemberData['phone_number'])) {
+    array_push($errorTextArray, 'Số điện thoại có chứa các kí tự khác số');
   } else if (strlen($newMemberData['phone_number']) > 15) {
     array_push($errorTextArray, 'Số điện thoại quá 15 kí tự');
   }
