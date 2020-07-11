@@ -22,6 +22,9 @@ try {
   </header>
 
   <div class="w3-container w3-padding">
+    <a class="w3-btn w3-blue" href="/<?php echo $prefixUrl; ?>/add">
+    <i class="material-icons">person_add</i> Thêm thành viên mới</a>
+    <hr>
     <table class="w3-table-all w3-hoverable">
       <caption>Danh sách thành viên</caption>
         <thead>
