@@ -5,3 +5,11 @@
 body > footer time {
     font-weight: bold;
 }
+
+.primary-key {
+    font-weight: bold;
+}
+
+tfoot {
+    font-weight: bold;
+}
