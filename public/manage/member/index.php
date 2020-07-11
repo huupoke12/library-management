@@ -12,7 +12,7 @@ require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/database-connect.php
 <section class="w3-section w3-card">
 
   <header class="w3-container w3-<?php echo PRIMARY_COLOR; ?>">
-    <h1><span class="material-icons">people</span> <?php echo $pageTitle; ?></h1>
+    <h1><i class="material-icons">people</i> <?php echo $pageTitle; ?></h1>
   </header>
 
   <div class="w3-container w3-padding">
@@ -51,7 +51,8 @@ try {
         break;
     }
     echo '</td>';
-    echo '<td><a class="w3-btn w3-blue" href="/' . $prefixUrl . '/view?id=' . $memberRow['id'] . '">Xem / Sửa</a></td>' ;
+    echo '<td><a class="w3-btn w3-blue" href="/' . $prefixUrl . '/view?id=' . $memberRow['id'] . '">';
+    echo '<i class="material-icons">visibility</i> Xem chi tiết</a></td>';
     echo '</tr>';
     $memberCount++;
   }
