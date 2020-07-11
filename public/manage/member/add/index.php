@@ -88,12 +88,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <form class="w3-container" method="post">
       <p>
         <label class="form-label" for="full_name">Họ và tên <abbr class="w3-text-red" title="bắt buộc">*</abbr></label>
-        <input class="w3-input" type="text" id="full_name" name="full_name" autofocus value="<?php echo $_POST['full_name']; ?>">
+        <input class="w3-input" type="text" id="full_name" name="full_name" autofocus required value="<?php echo $_POST['full_name']; ?>">
       </p>
 
       <p>
         <label class="form-label" for="birth_date">Ngày tháng năm sinh <abbr class="w3-text-red" title="bắt buộc">*</abbr></label>
-        <input class="w3-input" type="date" id="birth_date" name="birth_date" placeholder="YYYY-MM-DD" value="<?php echo $_POST['birth_date']; ?>">
+        <input class="w3-input" type="date" id="birth_date" name="birth_date" placeholder="YYYY-MM-DD" required value="<?php echo $_POST['birth_date']; ?>">
       </p>
 
       <fieldset>
@@ -116,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       <p>
         <label class="form-label" for="national_id">Số Căn cước công dân / Chứng minh thư nhân dân <abbr class="w3-text-red" title="bắt buộc">*</abbr></label>
-        <input class="w3-input" type="tel" id="national_id" name="national_id" value="<?php echo $_POST['national_id']; ?>">
+        <input class="w3-input" type="tel" id="national_id" name="national_id" required value="<?php echo $_POST['national_id']; ?>">
       </p>
 
       <p>
