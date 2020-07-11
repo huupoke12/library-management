@@ -10,7 +10,7 @@ require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/database-connect.php
 
 try {
   $memberTableData = $databaseConnection->query($memberTableQuery)->fetchAll();
-} catch(PDOException $e) {
+} catch (PDOException $e) {
   echo $e->getMessage();
 }
 ?>
