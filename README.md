@@ -11,7 +11,6 @@ Hoàn thiện một phần.
 ## Mục lục
 
 - [Mô tả](#mô-tả)
-- [Giảng viên hướng dẫn](#giảng-viên)
 - [Thành viên nhóm](#thành-viên)
 - [Các chức năng](#các-chức-năng)
 - [Mô hình](#mô-hình)
@@ -21,10 +20,6 @@ Hoàn thiện một phần.
 Nhằm hạn chế giấy mực, cũng như công sức viết lách ghi chú trong công việc quản lí thư viện, đây là một ứng dụng được viết nhằm hỗ trợ thủ thư quản lý sách trong thư viện, quản lý người dùng mượn sách và trả sách.
 
 Ứng dụng có thể dễ dàng thêm/sửa/xoá thông tin người dùng, lượt mượn, nhập/xuất sách, quản lí việc mượn, tình trạng sách, cũng như tính toán phí và tiền phạt (nếu có).
-
-## Giảng viên
-*TS. Lê Hồng Hải
-*ThS. Nguyễn Thị Thu Trang
 
 ## Thành viên
 * Nguyễn Đức Dũng (18020365)
