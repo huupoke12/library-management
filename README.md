@@ -17,7 +17,7 @@ Hoàn thiện một phần.
 
 ## Mô tả
 
-Nhằm hạn chế giấy mực, cũng như công sức viết lách ghi chú trong công việc quản lí thư viện, đây là một ứng dụng được viết nhằm hỗ trợ thủ thư quản lí người dùng mượn sách và trả sách.
+Nhằm hạn chế giấy mực, cũng như công sức viết lách ghi chú trong công việc quản lí thư viện, đây là một ứng dụng được viết nhằm hỗ trợ thủ thư quản lý sách trong thư viện, quản lý người dùng mượn sách và trả sách.
 
 Ứng dụng có thể dễ dàng thêm/sửa/xoá thông tin người dùng, lượt mượn, nhập/xuất sách, quản lí việc mượn, tình trạng sách, cũng như tính toán phí và tiền phạt (nếu có).
 
@@ -28,28 +28,25 @@ Nhằm hạn chế giấy mực, cũng như công sức viết lách ghi chú tr
 
 ## Các chức năng
 
-### Tra cứu
-
-| Chức năng          | Lệnh                     |
-| ------------------ | ------------------------ |
-| Liệt kê thành viên | `SELECT * FROM member;`  |
-| Liệt kê sách       | `SELECT * FROM book;`    |
-
 ### Quản lí thành viên
 
-| Chức năng                | Lệnh                                                                                      |
-| ------------------------ | ----------------------------------------------------------------------------------------- |
-| Thêm thành viên          | `INSERT INTO member (national_id, full_name, birth_date, join_date) VALUES (?, ?, ?, ?);` |
-| Sửa thông tin thành viên | `UPDATE member SET phone_number = ? WHERE id = ?;`                                        |
+| Chức năng                | Lệnh                                                                                                                                             |
+| ------------------------ | -----------------------------------------------------------------------------------------                                                        |
+| Xem bảng thông tin       | `SELECT id, national_id, full_name, birth_date, gender FROM member`                                                                              |
+| Xem thông tin chi tiết   | `SELECT * FROM member WHERE id = ?;`                                                                                                             |
+| Thêm thành viên          | `INSERT INTO member (national_id, full_name, birth_date, gender, email_address, phone_number, join_date, note) VALUES (?, ?, ?, ?, ?, ?, ?, ?);` |
+| Sửa thông tin thành viên | `UPDATE member SET phone_number = ? WHERE id = ?;`                                                                                               |
 
 ### Quản lí sách
 
-| Chức năng           | Lệnh                                                                       |
-| ------------------- | -------------------------------------------------------------------------- |
-| Thêm sách           | `INSERT INTO book (title, author, publisher, price) VALUES (?, ?, ?, ?);`  |
-| Sửa thông tin sách  | `UPDATE book SET isbn = ?, publish_year = ? WHERE id = ?;`                 |
-| Nhập thêm sách      | `INSERT INTO book_copy (book_id, import_date, usability) VALUES (?, ?, ?)` |
-| Sửa trạng thái sách | `UPDATE book_copy SET usability = ? WHERE id = ?;`                         |
+| Chức năng                | Lệnh                                                                                                                          |
+| -------------------      | --------------------------------------------------------------------------                                                    |
+| Xem bảng thông tin       | `SELECT id, isbn, title, author, publisher, price, borrow_count FROM book;`                                                   |
+| Xem thông tin chi tiết   | `SELECT * FROM book WHERE id = ?;`                                                                                            |
+| Thêm sách                | `INSERT INTO book (isbn, title, author, publisher, publish_year, price, borrow_count, note) VALUES (?, ?, ?, ?, ?, ?, ?, ?);` |
+| Sửa thông tin sách       | `UPDATE book SET isbn = ?, publish_year = ? WHERE id = ?;`                                                                    |
+| Nhập thêm sách           | `INSERT INTO book_copy (book_id, import_date, usability) VALUES (?, ?, ?)`                                                    |
+| Sửa trạng thái sách      | `UPDATE book_copy SET usability = ? WHERE id = ?;`                                                                            |
 
 ### Quản lí lượt mượn
 
