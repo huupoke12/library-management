@@ -11,7 +11,7 @@ require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/header.php';
 require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/ultility.php';
 require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/database-connect.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $newBookData = array(
     'isbn' => $_POST['isbn'],
     'title' => $_POST['title'],

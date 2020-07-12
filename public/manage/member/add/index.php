@@ -11,7 +11,7 @@ require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/header.php';
 require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/ultility.php';
 require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/include/database-connect.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $newMemberData = array(
     'national_id' => $_POST['national_id'],
     'full_name' => $_POST['full_name'],
