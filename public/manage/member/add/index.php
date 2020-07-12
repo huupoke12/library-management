@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     array_push($errorTextArray, 'Thiếu số căn cước công dân');
   } else if (!ctype_digit($newMemberData['national_id'])) {
     array_push($errorTextArray, 'Số căn cước công dân có chứa các kí tự khác số');
-  } else if (strlen($newMemberData['national_id']) > 12) {
-    array_push($errorTextArray, 'Số căn cước công dân quá 12 kí tự');
+  } else if (strlen($newMemberData['national_id']) !== 9 && strlen($newMemberData['national_id']) !== 12) {
+    array_push($errorTextArray, 'Số căn cước công dân chứa số kí tự khác 9 hoặc 12');
   }
   if (empty($newMemberData['gender'])) {
     $newMemberData['gender'] = NULL;

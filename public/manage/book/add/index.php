@@ -36,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $newBookData['isbn'] = NULL;
   } else if (!ctype_digit($newBookData['isbn'])) {
     array_push($errorTextArray, 'ISBN có chứa các kí tự khác số');
-  } else if (strlen($newBookData['isbn']) > 13) {
-    array_push($errorTextArray, 'ISBN quá 13 kí tự');
+  } else if (strlen($newBookData['isbn']) !== 10 && strlen($newBookData['isbn']) !== 13) {
+    array_push($errorTextArray, 'ISBN chứa số kí tự khác 10 hoặc 13');
   }
   if (empty($newBookData['author'])) {
     $newBookData['author'] = NULL;
