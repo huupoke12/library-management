@@ -6,7 +6,7 @@ Library Management project for INT2207 - Group #10
 
 ## Trạng thái dự án
 
-Chưa hoàn thành. Dự kiến hoàn thành trong ngày 12/07/2020.
+Hoàn thiện một phần.
 
 ## Mục lục
 
